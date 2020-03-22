@@ -1,0 +1,122 @@
+:root{
+    --clock-size: 500px;
+    --logo-size: 100px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(236, 212, 212);
+    color: white;
+    overflow: auto;
+    height: 100vh;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock{
+    box-sizing: content-box;
+    max-height: var(--clock-size);
+    max-width: var(--clock-size);
+    width: 100%;
+    height: 100%;
+    border: solid white 20px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    box-shadow: inset -1px -1px 7px 8px #474042;
+    background: url('./clock2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo{
+    background: url(./logo.png);
+    height: var(--logo-size);
+    width: var(--logo-size);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 90px;
+}
+
+.pivot{
+    height: 15px;
+    width: 15px;
+    background-color: rgb(160, 133, 133);
+    position: absolute;
+    border: transparent 1px;
+    border-radius: 50%;
+}
+
+.hands{
+    position: relative;
+    width: 5px;
+    height: 50%;
+    display: flex;
+    flex-flow: column-reverse;
+}
+
+.hr, .min, .sec{
+    position: absolute;
+    height: 240px;
+    width: 100%;
+    background-color: rgb(46, 43, 39);
+    transform-origin: bottom;
+    /* margin: 10px; */
+    /* transform: rotate(45deg); */
+
+}
+
+.hr{
+    height: 150px;
+    transform: rotate(45deg);
+}
+
+.min{
+    height: 220px;
+    transform: rotate(90deg);
+    width: 90%;
+}
+
+.sec{
+    width: 80%;
+    transform: rotate(180deg);
+    transition: 1s;
+    transition-timing-function: linear;
+}
+
+
+footer{
+    position: fixed;
+    bottom: 8px;
+    /* height: 100%; */
+    width: 100%;
+}
+.contacts{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.contacts a{
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    transition: color 0.2s;
+}
+.contacts a:hover{
+    text-decoration: underline;
+    color: rgb(75, 57, 57);
+}
